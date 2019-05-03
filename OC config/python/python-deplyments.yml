@@ -1,0 +1,29 @@
+kind: DeploymentConfig
+apiVersion: v1
+metadata:
+  name: python
+spec:
+  template:
+    metadata:
+      labels: 
+        name: python
+    spec:
+      containers:
+        - name:  python
+          image:  python:latest
+          ports:
+            - containerPort:  5000
+              protocol: TCP
+  replicas: 1
+  triggers: 
+    - type: ConfigChange
+    - type: ImageChange
+      imageChangeParams:
+        automatic:  true
+        containerNames:
+          - python
+        from:
+          kind: ImageStream
+          name: python:latest
+  strategy:
+    type: Rolling

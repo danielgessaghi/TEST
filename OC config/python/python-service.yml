@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: python
+spec:
+  selector:
+    app: python
+  ports:
+    - name: python-port
+      port: 5000
+      protocol: TCP
+      targetPort: 5000

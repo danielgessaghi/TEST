@@ -1,0 +1,10 @@
+kind: Route
+apiVersion: v1
+metadata: 
+  name: python
+spec:
+  port:
+    targetPort: python-port
+  to:
+    kind: Service
+    name: python
