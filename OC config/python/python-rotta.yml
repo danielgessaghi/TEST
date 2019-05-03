@@ -8,3 +8,5 @@ spec:
   to:
     kind: Service
     name: python
+#oc login
+#oc annotate route python haproxy.router.openshift.io/balance='roundrobin'
