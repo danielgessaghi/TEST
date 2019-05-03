@@ -6,7 +6,7 @@ spec:
   runPolicy:  Serial
   source:
     git:
-      uri:  https://github.com/danielgessaghi/TEST.git
+      uri:  https://github.com/sjeeva/flaskapp.git
   strategy:
     type: Docker
   output:
