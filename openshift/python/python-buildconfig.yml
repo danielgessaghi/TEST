@@ -1,0 +1,15 @@
+kind: BuildConfig
+apiVersion: v1
+metadata:
+  name: python 
+spec:
+  runPolicy: Serial 
+  source: 
+    git:
+      uri: https://github.com/danielgessaghi/TEST.git
+  strategy: 
+    type: Docker
+  output: 
+    to:
+      kind: ImageStreamTag
+      name: python:3.8
