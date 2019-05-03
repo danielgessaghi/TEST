@@ -4,9 +4,9 @@ metadata:
   name: python
 spec:
   selector:
-    app: python
+    name: python
   ports:
-    - name: python-port
+    - name: pythonport
       port: 5000
       protocol: TCP
       targetPort: 5000

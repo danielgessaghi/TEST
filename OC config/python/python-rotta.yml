@@ -4,7 +4,7 @@ metadata:
   name: python
 spec:
   port:
-    targetPort: python-port
+    targetPort: pythonport
   to:
     kind: Service
     name: python
