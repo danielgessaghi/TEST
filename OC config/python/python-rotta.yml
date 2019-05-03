@@ -1,10 +1,11 @@
 kind: Route
 apiVersion: v1
-metadata: 
-  name: python
+metadata:
   annotations:
     haproxy.router.openshift.io/balance: roundrobin
+    haproxy.router.openshift.io/disable_cookies: 'true'
     openshift.io/host.generated: 'true'
+  name: python
 spec:
   port:
     targetPort: pythonport
