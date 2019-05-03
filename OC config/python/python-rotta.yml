@@ -2,11 +2,12 @@ kind: Route
 apiVersion: v1
 metadata: 
   name: python
+  annotations:
+    haproxy.router.openshift.io/balance: roundrobin
+    openshift.io/host.generated: 'true'
 spec:
   port:
     targetPort: pythonport
   to:
     kind: Service
     name: python
-#oc login
-#oc annotate route python haproxy.router.openshift.io/balance='roundrobin'
